@@ -1,1 +1,1 @@
-worker bash worker.sh
+worker: bash worker.sh
