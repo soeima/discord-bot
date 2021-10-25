@@ -7,17 +7,14 @@ import youtube_dl
 from discord import FFmpegPCMAudio
 
 load_dotenv()
-if not discord.opus.is_loaded():
-    # the 'opus' library here is opus.dll on windows
-    # or libopus.so on linux in the current directory
-    # you should replace this with the location the
-    # opus library is located in and with the proper filename.
-    # note that on windows this DLL is automatically provided for you
-    discord.opus.load_opus('opus')
-
 client = discord.Client()
 
 queue = []
+
+discord.opus.load_opus()
+if not discord.opus.is_loaded():
+    print('Opus failed to load')
+
 
 @client.event
 async def on_ready():
