@@ -11,11 +11,6 @@ client = discord.Client()
 
 queue = []
 
-discord.opus.load_opus('opus')
-if not discord.opus.is_loaded():
-    print('Opus failed to load')
-
-
 @client.event
 async def on_ready():
     print('Bot is online')
