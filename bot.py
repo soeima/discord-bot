@@ -11,7 +11,7 @@ client = discord.Client()
 
 queue = []
 
-discord.opus.load_opus()
+discord.opus.load_opus('opus')
 if not discord.opus.is_loaded():
     print('Opus failed to load')
 
