@@ -1,1 +1,3 @@
-worker: bash worker.sh
+web: python3 bot.py
+
+worker: python3 bot.py
